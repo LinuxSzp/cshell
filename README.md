@@ -21,45 +21,7 @@
     * 在程序端,调用libcshell.a库中的注册函数,注册命令;
 
     * 在另一个终端使用telnet连接,可以
-        * ls ,              显示已经注册的命令;
         * 输入注册的命令 ,  显示相应的结果信息
-
-# 使用示例
-    伪代码
-    void test_fun()
-    {
-        printf("----------\n");
-        printf("|--test--|\n");
-        printf("----------\n");
-    }
-    void *cshell_thread(void *arg)
-    {
-        cshell_init();
-        return NULL;
-    }
-    int main(int argc, char *argv[])
-    {
-        ....
-        pthread_create(&tid, NULL, cshell_thread, NULL);
-        ....
-
-        ....
-        cshell_cmd("test", test_fun);
-        ....
-
-        return 0;
-    }
-    编译,运行
-
-    另一个终端,运行telnet
-    # telnet 127.0.0.1 6666
-    ...
-    ls
-        $cmd: 1. test
-    test
-    ----------
-    |--test--|
-    ----------
 
 # 联系方式
     邮箱: linuxszp@gmail.com
